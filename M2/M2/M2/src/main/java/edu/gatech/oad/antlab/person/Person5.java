@@ -25,13 +25,25 @@ public class Person5 {
 	 * 2 positions.
 	 * given "gtg123b" it should return
 	 * "g123bgt".
-	 *
 	 * @param input the string to be modified
 	 * @return the modified string
 	 */
 	private String calc(String input) {
 	  //Person 5 put your implementation here
-	  return null;
+	  char[] splitInput = new String[input.length];
+	  for (int i = 0; i < input.length; i++) {
+		  if ((i + 2) < input.length) {
+			  splitInput[i] = input.charAt(i + 2);
+		  }
+		  if ((i + 2) = input.length) {
+			  splitInput[i] = input.charAt(0);
+		  }
+		  if ((i + 2) > input.length) {
+			  splitInput[i] = input.charAt(1);
+		  }
+	  }
+	  String inputReturn = new String(splitInput);
+	  return inputReturn;
 	}
 	
 	/**
