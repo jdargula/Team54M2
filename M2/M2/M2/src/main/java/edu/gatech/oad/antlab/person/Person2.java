@@ -1,5 +1,7 @@
 package edu.gatech.oad.antlab.person;
 
+//EDITED
+
 /**
  *  A simple class for person 2
  *  returns their name and a
