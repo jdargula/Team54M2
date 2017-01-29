@@ -19,5 +19,5 @@ repositories {
 
 
 dependencies {
-	compile files('libs/resources.jar')
+	compile files('lib/resources.jar')
 }
