@@ -14,10 +14,10 @@ jar {
 
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 
 dependencies {
-	
+	compile files('libs/resources.jar')
 }
