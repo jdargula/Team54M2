@@ -1,0 +1,12 @@
+task socc {
+	doLast {
+		println "socc"
+	}
+}
+
+task shose {
+	dependsOn "socc"
+	doLast {
+		println "shose"
+	}
+}
