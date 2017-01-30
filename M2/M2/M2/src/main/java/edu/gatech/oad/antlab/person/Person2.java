@@ -37,7 +37,7 @@ public class Person2 {
 		int randInt = rand.nextInt(len);
 		String output = "";
 
-		ArrayList<Character> inpList = new <>ArrayList();
+		ArrayList<Character> inpList = new ArrayList<>();
 
 		for (int i = 0; i < len; i++) {
 			inpList.add(input.charAt(i));
