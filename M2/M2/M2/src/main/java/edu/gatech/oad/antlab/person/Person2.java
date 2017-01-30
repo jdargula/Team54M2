@@ -1,4 +1,7 @@
 package edu.gatech.oad.antlab.person;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 //EDITED
 
@@ -33,7 +36,7 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 		Random rand = new Random();
-		int len = input.length;
+		int len = input.length();
 		int randInt = rand.nextInt(len);
 		String output = "";
 
