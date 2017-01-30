@@ -2,7 +2,6 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'checkstyle'
 
-//set up some variables
 sourceCompatibility = 1.8
 version = '1.0'
 
@@ -18,9 +17,9 @@ jar {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.+'
+    compile files('lib/resources.jar')
 }
 
 repositories {
-   mavenCentral()
+    mavenCentral()
 }
