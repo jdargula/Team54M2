@@ -1,0 +1,21 @@
+defaultTasks 'jar'
+
+apply plugin: 'java'
+
+sourceCompatability = 1.8
+version = '1.0'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+}
