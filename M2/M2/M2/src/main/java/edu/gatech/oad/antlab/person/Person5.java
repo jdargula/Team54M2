@@ -1,4 +1,5 @@
 package edu.gatech.oad.antlab.person;
+import java.util.Arrays;
 
 /**
  *  A simple class for person 5
@@ -25,25 +26,29 @@ public class Person5 {
 	 * 2 positions.
 	 * given "gtg123b" it should return
 	 * "g123bgt".
+	 *
 	 * @param input the string to be modified
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 5 put your implementation here
-	  char[] splitInput = new String[input.length];
-	  for (int i = 0; i < input.length; i++) {
-		  if ((i + 2) < input.length) {
-			  splitInput[i] = input.charAt(i + 2);
-		  }
-		  if ((i + 2) = input.length) {
-			  splitInput[i] = input.charAt(0);
-		  }
-		  if ((i + 2) > input.length) {
-			  splitInput[i] = input.charAt(1);
-		  }
-	  }
-	  String inputReturn = new String(splitInput);
-	  return inputReturn;
+	  //Split the string into its characters
+	    char[] splitInput = input.toCharArray();
+
+	  //First two characters get pushed to the back
+        char firstLetter = splitInput[0];
+        char secondLetter = splitInput[1];
+		
+	  //Iterate through
+        for (int i = 0; i < input.length() - 3; i++) {
+            splitInput[i] = splitInput[i + 2];
+        }
+		
+	  //Put the two characters at the end
+        splitInput[input.length() - 2] = firstLetter;
+        splitInput[input.length() - 1] = secondLetter;
+		
+		String output = Arrays.toString(splitInput);
+        return output;
 	}
 	
 	/**
