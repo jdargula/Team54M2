@@ -1,4 +1,7 @@
 package edu.gatech.oad.antlab.person;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 //EDITED
 
@@ -32,8 +35,22 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return "da3frdonu";
+		Random rand = new Random();
+		int len = input.length();
+		int randInt = rand.nextInt(len);
+		String output = "";
+
+		ArrayList<Character> inpList = new ArrayList<>();
+
+		for (int i = 0; i < len; i++) {
+			inpList.add(input.charAt(i));
+		}
+		Collections.shuffle(inpList, rand);
+		for (int n = 0; n < len; n++) {
+			output = output + inpList.get(n);
+		}
+
+	  return output;
 	}
 	/**
 	 * Return a string rep of this object
