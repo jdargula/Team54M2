@@ -40,7 +40,12 @@ public class Person1 {
         }
         inputArr[input.length() - 2] = firstChar;
         inputArr[input.length() - 1] = secondChar;
-        return Arrays.toString(inputArr);
+        
+		String output = "";
+		for (int j = 0; j < input.length(); j++) {
+			output = output + inputArr[j];
+		}
+        return output;
     }
 
     /**

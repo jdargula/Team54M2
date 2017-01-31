@@ -32,22 +32,19 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  //Split the string into its characters
-	    char[] splitInput = input.toCharArray();
-
-	  //First two characters get pushed to the back
-        char firstLetter = splitInput[0];
-        char secondLetter = splitInput[1];
-		
-	  //Iterate through
+        char[] inputArr = input.toCharArray();
+        char firstChar = inputArr[0];
+        char secondChar = inputArr[1];
         for (int i = 0; i < input.length() - 3; i++) {
-            splitInput[i] = splitInput[i + 2];
+            inputArr[i] = inputArr[i + 2];
         }
+        inputArr[input.length() - 2] = firstChar;
+        inputArr[input.length() - 1] = secondChar;
 		
-	  //Put the two characters at the end
-        splitInput[input.length() - 2] = firstLetter;
-        splitInput[input.length() - 1] = secondLetter;
-		
-		String output = Arrays.toString(splitInput);
+		String output = "";
+		for (int j = 0; j < input.length(); j++) {
+			output = output + inputArr[j];
+		}
         return output;
 	}
 	
